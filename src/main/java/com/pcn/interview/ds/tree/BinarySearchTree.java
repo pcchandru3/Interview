@@ -7,6 +7,20 @@ public class BinarySearchTree {
 	TreeNode root=null;
 	
 	
+	public boolean isBST(TreeNode node, int min, int max){
+		boolean flag = false;
+		
+		if(node == null){
+			return true;
+		}
+		if(node.data < min  || node.data > max)
+			return false;
+		
+		return (isBST(node.left, min, node.data-1 ) && isBST(node.right, node.data+1, max));
+		
+		
+	}
+	
 	public void insert(int value){
 		TreeNode node = new TreeNode(value);
 		TreeNode parent;
@@ -141,7 +155,12 @@ public class BinarySearchTree {
 		
 		
 		
-		System.out.println(bt.search(120).data);
+		System.out.println(bt.search(10).data);
+		
+		
+		
+		System.out.println(bt.isBST(bt.root, Integer.MIN_VALUE, Integer.MAX_VALUE));
+		
 		
 	}
 	

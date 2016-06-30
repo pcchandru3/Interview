@@ -1,4 +1,4 @@
-package com.pcn.interview.ds.linkedlist;
+package com.pcn.interview.ds.node;
 
 public class SLLNode {
 	

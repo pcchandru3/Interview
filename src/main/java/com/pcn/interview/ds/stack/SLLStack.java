@@ -1,6 +1,6 @@
 package com.pcn.interview.ds.stack;
 
-import com.pcn.interview.ds.linkedlist.SLLNode;
+import com.pcn.interview.ds.node.SLLNode;
 
 public class SLLStack {
 	

@@ -2,6 +2,8 @@ package com.pcn.interview.ds.linkedlist;
 
 import org.junit.Test;
 
+import com.pcn.interview.ds.node.SLLNode;
+
 public class SingleLinkedList {
 	
 	SLLNode root;

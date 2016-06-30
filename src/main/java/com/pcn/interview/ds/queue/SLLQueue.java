@@ -1,6 +1,6 @@
 package com.pcn.interview.ds.queue;
 
-import com.pcn.interview.ds.linkedlist.SLLNode;
+import com.pcn.interview.ds.node.SLLNode;
 
 public class SLLQueue {
 	

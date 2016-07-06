@@ -20,7 +20,7 @@ public class ReadInput {
 		String s = String.valueOf(i);
 		
 		s= Integer.toString(i);
-		Integer.MIN_VALUE
+		
 		
 	}
 

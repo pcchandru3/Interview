@@ -1,0 +1,3 @@
+2016-07-07 16:05:28,321 [main] INFO  com.pcn.interview.logging.Log4JSample - This is info message
+2016-07-07 16:05:28,323 [main] INFO  com.pcn.interview.logging.Log4JSample - This is isdfasdfnfo message
+2016-07-07 16:05:28,323 [main] DEBUG com.pcn.interview.logging.Log4JSample - This is info message

@@ -36,8 +36,10 @@ public class Febonacci {
 		if (n==1)
 			return 1;
 		
-		else
+		else{
+			System.out.println(n);
 			return febSum(n-1) + febSum(n-2);
+		}
 				
 	}
 	

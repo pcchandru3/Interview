@@ -27,11 +27,20 @@ public class FindNonRepeatNo {
 		//HashMap<int, int> m = new HashMap<int,int>();
 		
 		
+		
+		
+		
 		for(int i : h.keySet()){
 			if(h.get(i) == 1)
 				System.out.println("non repeating no " + i);
 		}
 		
+		
+		// OR
+		for(int i : h.values()){
+			if(i==1)
+				System.out.println("non repeating no ------" + h.get(i));
+		}
 		
 		
 		

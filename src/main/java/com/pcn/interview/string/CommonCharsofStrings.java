@@ -23,7 +23,8 @@ public class CommonCharsofStrings {
 		
 		for(int i=0;i<s2.length();i++){
 			if(t.containsKey(s2.charAt(i)))
-				t.put(s2.charAt(i), true);
+				//t.put(s2.charAt(i), true);
+				t.replace(s2.charAt(i), true);
 		}
 		
 		

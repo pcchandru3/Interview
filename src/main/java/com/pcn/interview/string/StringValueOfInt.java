@@ -11,12 +11,19 @@ public class StringValueOfInt {
 		String str="";
 		
 		while(n>0){
-			int a = (char) (n%10);
+			int a =  (n%10);
 			n = n/10;
 			
 			str += a;
 			
 		}
+		
+
+		
+		System.out.println(Character.isDigit('5'));
+		System.out.println(Character.isLetter('1'));
+		System.out.println(Character.isSpaceChar(' '));
+		
 		
 		
 		

@@ -19,12 +19,16 @@ public class FindSubString {
 		int k=0;
 		
 		for(int i=0;i<a.length;i++){
-			if(i==0)
-				h.put(a[i], k);
-			else{
+			if(i!=0)
 				k = k + a[i-1].length()+1;
-				h.put(a[i], k);
-			}
+			
+			h.put(a[i], k);
+			
+			
+//			else{
+//				
+				//h.put(a[i], k);
+			//}
 				
 		}
 		

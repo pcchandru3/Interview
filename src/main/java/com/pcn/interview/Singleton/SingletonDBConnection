@@ -1,0 +1,22 @@
+package com.pcn.interview;
+
+public class SingletonDBConnection {
+    // Private Instance
+    private static final SingletonDBConnection instance;
+    
+    // Private COnstructor
+    private SingletonDBConnection() {}
+
+    // Public Static method
+    public static SingletonDBConnection getInstance() {
+        if(instance == null){
+            instance = new SingletonDBConnection(); // create an db connection
+        }
+        return instance;
+    }
+
+    public void executeQuery(String sql) {
+        System.out.println("Executing Query : " + sql);
+    }
+
+}

@@ -1,0 +1,18 @@
+package com.pcn.interview;
+
+public class SingletonMainApp {
+    public static void main(String[] args) {
+
+        SingletonDBConnection db1 = SingletonDBConnection.getInstance();
+        db1.executeQuery("select * from users");
+
+        SingletonDBConnection db2 = SingletonDBConnection.getInstance();
+        db2.executeQuery("select * from products");
+
+
+        // test
+        System.out.println(db1 == db2);
+
+
+    }
+}

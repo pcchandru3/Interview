@@ -51,8 +51,8 @@ public class LogParser {
             }
         }
         
-        
-        
+
+        return null;
         
     }
     
@@ -60,7 +60,7 @@ public class LogParser {
     public void getErrorData() {
         
         for(LogData l : logData){
-            if(l.sTag.equals("Error"){
+            if(l.sTag.equals("Error")){
                 // logic 
             }
         }

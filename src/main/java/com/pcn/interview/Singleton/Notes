@@ -1,0 +1,72 @@
+References:
+    https://blog.ashutoshkrris.in/the-ultimate-guide-to-the-java-singleton-pattern
+    
+
+Singleton Pattern : A class that has only one instance, and provieds global access
+to that instance. 
+    1. Private Constructor : private SingleonClass() {}
+    2. Private Instance : private static instance;
+    3. Public method : public static getInstance () { return instance; }
+
+1. Eager Singleton
+2. Lazy Singleton
+3. Synchronized Method Singleton
+    With this, even after the first instance created, all the other threads / calls
+    will wait to be exuecuted in serial fashion, cuncorrency missing
+4. Double Checked Locking Singleton (Static Block Synchronized Singleton with 
+    volatile keyword)
+
+5. Inner Class Singleton
+
+For all these approaches, we have a problem
+    a. Reflection : using reflection, a developer can access the private Constructor
+        Constructors[] constructors = Singleton.class.getDeclaredConstructors();
+        for (Constructor constructor : constructors){
+            constructor.setAccessible(true);
+            instanceTwo = (Singleton) constructor.newInstance();
+            break;
+        }
+
+        We may need to add a check in the constructor 
+        private Singleton () {
+            if (instance != null){
+                throw new RuntimeException("Instance already exists! use getInstance()
+                method");
+            }
+        }
+
+        Note : Thought about why cant we instantiate the instance object inside the
+            private constructor with a check. But this is wrong, as we are calling
+            new Singleton(), which means we are calling the same class initiation
+            inside the another initiation. This will cause recussion and endless
+            loop and crashes the program.
+
+
+    b. Serialization
+    c. Cloning
+
+
+
+6. Final Better Indestructable Solutoin : Enum
+        public enum SingletonEnum {
+            INSTANCE;
+
+            public getInstance() {
+                // your config code to db
+            }
+        }
+
+    In Main Method
+        SingletonEnum.INSTANCE.getInstance();
+
+
+    // Enums
+    // Multiple variables pointing to the same enum instance
+        public enum Status {
+            PENDING;
+        }
+        Status order1 = Status.PENDING;
+        Status order2 = Status.PENDING; 
+
+        System.out.println(order1 == order2); // Prints: true
+
